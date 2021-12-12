@@ -1,8 +1,21 @@
 import click
 
-@click.command()
-def hello():
-    click.echo('Hello World!')
+taskcounter = 0
 
-if __name__ == '__main__':
-    hello()
+#Create a new task
+def newtask(): 
+    input("Task: ")
+    taskcounter = taskcounter +1  #I want to add +1 to the task counter but can´t
+    print("You have ", taskcounter,"tasks")
+
+
+#Main interface
+print("Welcome to tasks")
+print("Press t to create a new task")
+
+
+answer = input()
+
+
+if answer == "t":
+    newtask()
