@@ -1,4 +1,4 @@
-import click
+
 
 taskcounter = 0
 tasksarray = []
@@ -15,14 +15,19 @@ def create_new_task():
     taskcounter = +1  
 
 print_main_interface()
-while True:
+option = input("Choose an option: ")
+
+while option != "x":
     
-    if input() == "t":
+    if option == "t":
         create_new_task()
     
-    if input() == "p":
+    elif option == "p":
         print(tasksarray)
+    else:
+        print("Invalid option.")
 
+    print_main_interface()
+    option = input("Choose an option: ")
 
-    if input() == "x":
-        break
+print("Thanks for using the app")
